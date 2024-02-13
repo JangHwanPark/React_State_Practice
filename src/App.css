@@ -1,38 +1,86 @@
-.App {
+.profile {
+  width: 300px;
+  padding: 1rem;
   text-align: center;
+  background: #ebebeb;
+  box-shadow: 7px 5px 23px -9px rgba(0, 0, 0, .75);
+  position: relative;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.photo {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.avartar {
+  width: 200px;
+  height: 200px;
+  margin: auto;
+  position: relative;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.new {
+  width: 50px;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: aqua;
+  border-radius: 5px;
+  position: absolute;
+  top: 10%;
+  left: 70%;
+}
+
+/* Counter */
+.banner {
+  margin: 2rem;
+  padding: 1rem;
+  background: yellow;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.counter {
+  margin: 2rem;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border-radius: 1rem;
+  border: 2px solid rgb(215, 127, 12);
 }
 
-.App-link {
-  color: #61dafb;
+.counter:hover {
+  background: rgb(246, 243, 197);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.number {
+  font-size: 7rem;
+}
+
+.button {
+  font-size: 2rem;
+  padding: 0.2rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  background: rgb(215, 127, 12);
+  background: linear-gradient(
+          90deg,
+          rgba(215, 127, 12, 1) 0%,
+          rgba(253, 220, 29, 1) 100%
+  );
+}
+
+.pointer-container {
+  width: 100vw;
+  height: 100vh;
+}
+
+.mouse {
+  width: 30px;
+  height: 30px;
+  background: red;
+  border-radius: 50%;
+  position: absolute;
 }
