@@ -7,15 +7,23 @@ export default function CommentList() {
 
     const handleCommentAdd = (comment) => {
         setComments([...comments, comment]);
-        console.log(comments);
+    }
+
+    const handleCommendDelete = (deleted) => {
+        console.log(deleted)
+        setComments(comments.filter(t => t.id !== deleted.id));
     }
 
     return (
         <section>
             <AddCommentForm onCommentAdd={handleCommentAdd}/>
             <ul>
-                {comments.map((currentValue, idx) => (
-                    <AddedCommentItem key={idx} currentValue={currentValue}/>
+                {comments.map((currentValue) => (
+                    <AddedCommentItem
+                        key={currentValue.id}
+                        currentValue={currentValue}
+                        onCommentDelete={handleCommendDelete}
+                    />
                 ))}
             </ul>
         </section>
