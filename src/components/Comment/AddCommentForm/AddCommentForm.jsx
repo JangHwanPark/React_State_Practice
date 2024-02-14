@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 
-export default function AddComment({ onCommentAdd }) {
+export default function AddCommentForm({ onCommentAdd }) {
     const [text, setText] = useState('');
 
     const handleInputChange = (e) => {

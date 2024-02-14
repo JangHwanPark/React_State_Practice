@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
-import CommentList from "./comment/CommentList/CommentList";
-import CommentHeader from "./comment/CommentHeader/CommentHeader";
+import CommentList from "./components/Comment/CommentList/CommentList";
+import CommentHeader from "./components/Comment/CommentHeader/CommentHeader";
 import {DarkModeProvider} from "./context/DarkModeContext";
 
 function App() {
