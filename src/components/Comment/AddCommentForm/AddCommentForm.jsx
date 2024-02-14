@@ -10,6 +10,11 @@ export default function AddCommentForm({ onCommentAdd }) {
 
     const handleFormSubmit = (e) => {
         e.preventDefault();
+        if (text.trim().length === 0) {
+            alert('글자를 입력하세요.');
+            return;
+        }
+
         onCommentAdd({ id: uuidv4(), text });
         setText('');
     }
