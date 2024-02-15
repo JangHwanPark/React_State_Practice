@@ -3,7 +3,7 @@ import './App.css';
 import CommentList from "./components/Comment/CommentList/CommentList";
 import CommentHeader from "./components/Comment/CommentHeader/CommentHeader";
 import {DarkModeProvider} from "./context/DarkModeContext";
-import AppComment from "./pages/AppComment";
+import AppComment from "./pages/AppComment/AppComment";
 
 function App() {
     return (

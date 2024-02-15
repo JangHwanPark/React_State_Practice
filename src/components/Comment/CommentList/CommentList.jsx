@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import styles from './CommentList.module.css';
 import AddCommentForm from "../AddCommentForm/AddCommentForm";
 import AddedCommentItem from "../AddedCommentItem/AddedCommentItem";
 
@@ -15,9 +16,9 @@ export default function CommentList() {
     }
 
     return (
-        <section>
+        <section className={styles.comment_section}>
             <AddCommentForm onCommentAdd={handleCommentAdd}/>
-            <ul>
+            <ul className={styles.comment_list}>
                 {comments.map((currentValue) => (
                     <AddedCommentItem
                         key={currentValue.id}

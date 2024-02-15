@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './AddedCommentItem.module.css';
 
 export default function AddedCommentItem ({ currentValue, onCommentDelete }) {
     const { text } = currentValue;
@@ -8,7 +9,7 @@ export default function AddedCommentItem ({ currentValue, onCommentDelete }) {
     }
 
     return (
-        <li>
+        <li className={styles.comment_item}>
             <p>{text}</p>
             <button>답글</button>
             <button>수정</button>
