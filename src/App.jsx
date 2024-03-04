@@ -1,16 +1,30 @@
-import logo from './logo.svg';
 import './App.css';
-import CommentList from "./components/Comment/CommentList/CommentList";
-import CommentHeader from "./components/Comment/CommentHeader/CommentHeader";
 import {DarkModeProvider} from "./context/DarkModeContext";
-import AppComment from "./pages/AppComment/AppComment";
+import PropsPractice from "./components/PropsPractice/PropsPractice";
+import PropsSpreadPractice from "./components/PropsPractice/PropsSpreadPractice";
+import DefaultPropsPractice from "./components/PropsPractice/DefaultPropsPractice";
 
-function App() {
+export default function App() {
+    const props = {
+        name: 'Next.js',
+        developed: 'Vercel',
+        type: '프레임워크',
+        language: '자바스크립트, TypeScript',
+        license: '오픈소스',
+    };
+
     return (
         <DarkModeProvider>
-            <AppComment/>
+            <PropsPractice
+                name={'리액트'}
+                developed={'메타'}
+                type={'라이브러리'}
+                language={'자바스크립트'}
+                license={'오픈소스'}
+            />
+            <PropsSpreadPractice {...props}/>
+            <DefaultPropsPractice name={'리액트'} developed={'메타'}/>
+            <DefaultPropsPractice/>
         </DarkModeProvider>
     );
 }
-
-export default App;
