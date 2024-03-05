@@ -14,6 +14,7 @@ import Comment from "./pages/Comment/Comment";
 
 // 새로운 경로
 import Contact from "./pages/Contact/Contact";
+import UseStatePage from "./pages/UseStatePage";
 
 const router = createBrowserRouter ([
     {
@@ -21,8 +22,9 @@ const router = createBrowserRouter ([
         element: <App/>,
         errorElement: <ErrorPage/>,
         children: [
-            {path: "/home", element: <Home/>},
-            {path: "/comment", element: <Comment/>}
+            {index: true, element: <Home/>},
+            {path: "/comment", element: <Comment/>},
+            {path: "/state", element: <UseStatePage/>}
         ]
     },
     {path: "contacts/:contactId", element: <Contact/>}
