@@ -4,18 +4,14 @@ export default function UseStatePrev(props) {
     const [count, setCount] = useState(0);
     const handleSum = () => {
         setCount(count + 1);
-        setCount(count + 2);
-        setCount(count + 3);
-        setCount(count + 4);
-        setCount(count + 5);
+        setCount(count + 1);
+        setCount(count + 1);
     }
 
     const handlePrevSum = () => {
         setCount((prev) => prev + 1);
-        setCount((prev) => prev + 2);
-        setCount((prev) => prev + 3);
-        setCount((prev) => prev + 4);
-        setCount((prev) => prev + 5);
+        setCount((prev) => prev + 1);
+        setCount((prev) => prev + 1);
     }
 
     return (
