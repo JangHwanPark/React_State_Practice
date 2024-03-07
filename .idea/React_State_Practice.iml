@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/.tmp" />
+      <excludeFolder url="file://$MODULE_DIR$/temp" />
+      <excludeFolder url="file://$MODULE_DIR$/tmp" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="react-basic" />
+    <orderEntry type="module" module-name="todo-final" />
+    <orderEntry type="module" module-name="7feb_client" />
+    <orderEntry type="module" module-name="javascript-practice" />
+    <orderEntry type="module" module-name="JavaScript-Learning" />
+    <orderEntry type="module" module-name="react-video" />
+    <orderEntry type="module" module-name="react-todo" />
+    <orderEntry type="module" module-name="youtube_header_079be105c0" />
+    <orderEntry type="module" module-name="react-book" />
+    <orderEntry type="module" module-name="jest-book" />
+    <orderEntry type="module" module-name="algorithm-book" />
+  </component>
+</module>
