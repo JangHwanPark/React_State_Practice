@@ -8,6 +8,7 @@ export default function Navbar() {
             <Link to="/">Home</Link>
             <Link to="/comment">Comment</Link>
             <Link to="/state">UseStatePage</Link>
+            <Link to="/hooks">Hooks</Link>
         </nav>
     );
 }
