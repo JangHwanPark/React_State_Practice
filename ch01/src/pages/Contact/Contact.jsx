@@ -49,7 +49,7 @@ export default function Contact() {
                     </Form>
                     <Form
                         method="post"
-                        action="destroy"
+                        action="../../../../node_modules/destroy"
                         onSubmit={(event) => {
                             if (
                                 !window.confirm( // 여기를 수정했습니다.
