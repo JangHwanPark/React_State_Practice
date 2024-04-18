@@ -1,0 +1,14 @@
+/* */
+.w-full {
+    width: 100% !important;
+}
+
+/* margin, padding */
+.mg-15 {
+    margin: 1.5rem !important;
+}
+
+/* flex layout */
+.flex {
+    display: flex;
+}
