@@ -1,7 +1,7 @@
 import {Outlet} from "react-router-dom";
-import Header from "../components/Header";
+import Header from "../layout/Header";
 import {useState} from "react";
-import Form from "../components/Form";
+import Form from "../layout/Form";
 
 function App() {
     // 사용자 입력

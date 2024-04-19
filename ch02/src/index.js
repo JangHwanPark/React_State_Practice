@@ -7,6 +7,7 @@ import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import Home from "./pages/Home";
 import Products from "./pages/Products";
 import Search from "./pages/Search";
+import Components from "./pages/Components";
 
 // Set Routing
 const route = createBrowserRouter([
@@ -20,6 +21,7 @@ const route = createBrowserRouter([
             {index:true, element: <Home/>}, // children 의 기본 경로
             {path: "/products", element: <Products/>},
             {path: "/search", element: <Search/>},
+            {path: "/components", element: <Components/>},
         ]
     }
 ])
