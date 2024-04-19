@@ -6,7 +6,7 @@ import Form from "../components/Form";
 function App() {
     // 사용자 입력
     const [input, setInput] = useState('');
-
+    
     return (
         <div className='m-10 h-full'>
             <Header>

@@ -1,12 +1,12 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import {Outlet} from "react-router-dom";
 
 function App() {
-  return (
-    <div className="App">
-
-    </div>
-  );
+    return (
+        <div className="w-full">
+            <Outlet/>
+        </div>
+    );
 }
 
 export default App;
