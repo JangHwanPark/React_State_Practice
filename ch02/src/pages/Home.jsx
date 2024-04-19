@@ -1,4 +1,6 @@
 import React, {useEffect, useState} from 'react';
+import AllData from "../components/AllData";
+import SearchData from "../components/SearchData";
 
 export default function Home() {
     // 데이터 패칭
@@ -21,21 +23,11 @@ export default function Home() {
     
     // 렌더링
     return (
-        <div className={'text-xl'}>
-            <div className={'mb-5'}>
-                <h1>검색 결과</h1>
-            </div>
-            {lang ? (
-                lang.languages.map((item, idx) => (
-                    <div key={idx} className={'text-blue-500'}>
-                        <p>Name: {item.name}</p>
-                        <p>Type: {item.type}</p>
-                        <p>Designed by: {item.designed_by}</p>
-                    </div>
-                ))
-            ) : (
-                <p>데이터 로딩 중...</p>
-            )}
+        <div className={'text-xl grid grid-cols-4'}>
+            <SearchData title={'검색 결과'}/>
+            <SearchData title={'검색 기록'}/>
+            <SearchData title={'실시간 급상승 검색어'}/>
+            <AllData data={lang}/>
         </div>
     );
 }
