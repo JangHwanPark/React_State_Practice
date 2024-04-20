@@ -8,6 +8,7 @@ import NotFound from "./pages/NotFound";
 import Home from "./pages/Home";
 import LayoutPage from "./layout/LayoutPage";
 import About from "./pages/About";
+import Post from "./pages/Post";
 
 const route = createBrowserRouter([
     {
@@ -18,6 +19,7 @@ const route = createBrowserRouter([
             {index: true, element: <Home/>},
             {path: "/about", element: <About/>},
             {path: "/test", element: <LayoutPage/>},
+            {path: "/posts/:postId", element: <Post/>},
             {path: "/test", element: <LayoutPage/>}
         ]
     }

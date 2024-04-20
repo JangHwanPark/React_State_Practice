@@ -24,7 +24,7 @@ export default function LikeButton() {
     }, [like]);
 
     return (
-        <button className={'flex items-center gap-1 cursor-pointer'} onClick={handleClickLike}>
+        <button className={'ml-auto flex items-center gap-1 cursor-pointer'} onClick={handleClickLike}>
             <span>{like ? <GoHeartFill/> : <GoHeart/>}</span>
             <span>{cnt}</span>
         </button>

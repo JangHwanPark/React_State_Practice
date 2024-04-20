@@ -15,7 +15,6 @@ export default function Header() {
                     <Link to={'/test'}>layout</Link>
                     <Link to="/about" className="px-2 hover:text-gray-300">About</Link>
                     <Link to="/articles" className="px-2 hover:text-gray-300">Posts</Link>
-                    <Link to="/contact" className="px-2 hover:text-gray-300">연락처</Link>
                 </nav>
             </div>
             <div className={'text-opacity-60 flex items-center gap-1 text-2xl md:text-base'}>
