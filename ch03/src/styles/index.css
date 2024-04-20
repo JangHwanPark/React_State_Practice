@@ -25,3 +25,12 @@ code {
 #wrap {
   width: 100%;
 }
+
+button {
+  border: none;
+  background: none;
+}
+
+button:focus {
+  outline: none;
+}

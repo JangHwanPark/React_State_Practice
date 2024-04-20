@@ -3,7 +3,6 @@ import {Outlet} from "react-router-dom";
 import Footer from "./layout/Footer";
 import Header from "./layout/Header";
 import Categorise from "./components/Categorise/Categorise";
-import {RiCodeView} from "react-icons/ri";
 import Title from "./components/Title/Title";
 
 function App() {
