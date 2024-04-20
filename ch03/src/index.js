@@ -8,7 +8,9 @@ import NotFound from "./pages/NotFound";
 import Home from "./pages/Home";
 import LayoutPage from "./layout/LayoutPage";
 import About from "./pages/About";
-import Post from "./pages/Post";
+import PostDetail from "./pages/PostDetail";
+import {Provider} from "react-redux";
+import store from './store/store';
 
 const route = createBrowserRouter([
     {
@@ -18,18 +20,18 @@ const route = createBrowserRouter([
         children: [
             {index: true, element: <Home/>},
             {path: "/about", element: <About/>},
-            {path: "/test", element: <LayoutPage/>},
-            {path: "/posts/:postId", element: <Post/>},
+            {path: "/posts/:postId", element: <PostDetail/>},
             {path: "/test", element: <LayoutPage/>}
         ]
     }
 ])
 
-const root = ReactDOM.createRoot(document.getElementById('wrap'));
+const container = document.getElementById('wrap');
+const root = ReactDOM.createRoot(container);
 root.render(
-    <React.StrictMode>
+    <Provider store={store}>
         <RouterProvider router={route}/>
-    </React.StrictMode>
+    </Provider>
 );
 
 // If you want to start measuring performance in your app, pass a function
