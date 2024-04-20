@@ -3,9 +3,11 @@ import { render, screen } from '@testing-library/react';
 import PostsList from './PostsList';
 
 describe('PostsList', () => {
-    it('renders PostsList component', () => {
+    it('renders PostsList component with correct classes', () => {
         render(<PostsList />);
-        expect(screen.getByText(/주요 기사 제목/)).toBeInTheDocument();
-        expect(screen.getByText('기사 내용...')).toBeInTheDocument();
+        const postsListElement = screen.getByText(/주요 기사 제목/).closest('article');
+        expect(postsListElement).toHaveClass('col-span-3');
+        expect(postsListElement).toHaveTextContent('주요 기사 제목');
+        expect(postsListElement).toHaveTextContent('기사 내용...');
     });
 });

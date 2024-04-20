@@ -1,11 +1,14 @@
 import React from 'react';
-import {Link} from "react-router-dom";
+import GridLayout from "../layout/GridLayout";
+import SideMenu from "../components/SideMenu/SideMenu";
+import PostsList from "../components/PostsList/PostsList";
+import Categorise from "../components/Categorise/Categorise";
 
 export default function Home() {
     return (
-        <div>
-            Home
-            <Link to={'/test'}>layout test</Link>
-        </div>
+        <GridLayout>
+            <PostsList/>
+            <SideMenu/>
+        </GridLayout>
     );
 }
