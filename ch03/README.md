@@ -3,7 +3,11 @@
 ## Description
 This is a simple React.js blog app that features creating, reading, updating, and deleting blog posts.
 
-## Installation
+## Feature
+
+- Categorise
+- Search (Modal)
+- Posts CURD
 
 ### Prerequisites
 - Node.js
