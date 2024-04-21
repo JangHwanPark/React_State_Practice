@@ -1,34 +1,12 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import LikeButton from "../LikeButton/LikeButton";
 import {Link} from "react-router-dom";
-import { marked } from 'marked';
-import {useDispatch, useSelector} from "react-redux";
-import {setPosts} from "../../store/actions/actions";
+import {useSelector} from "react-redux";
+import UseFetchPost from "../../hooks/useFetchPost";
 
 export default function PostsList() {
-    const dispatch = useDispatch();
+    UseFetchPost();
     const { filteredPosts } = useSelector((state) => state.posts);
-
-    useEffect(() => {
-        // 마크다운 파일 목록 가져옴
-        const markdownFile = require.context('../../posts', true, /\.md$/);
-
-        Promise.all(
-            markdownFile.keys().map(file => {
-                const markdown = markdownFile(file);
-
-                return fetch(markdown)
-                    .then(res => res.text())
-                    .then((text) => ({
-                        slug: file.replace('./', '').replace('.md', ''),
-                        title: text.split('\n')[0].replace('# ', ''), // 첫 번째 줄이 제목
-                        content: marked(text),
-                    }));
-            })
-        ).then((posts) => {
-            dispatch(setPosts(posts)); // 가져온 포스트 데이터를 Redux 스토어에 저장합니다.
-        });
-    }, [dispatch]);
 
     return (
         <>

@@ -8,7 +8,6 @@ function PostDetail() {
     const post = useSelector(state =>
         state.posts.posts.find(p => p.slug === slug)
     );
-    console.log(post, slug)
 
     useEffect(() => {
         if (!post) {
@@ -16,13 +15,11 @@ function PostDetail() {
         }
     }, [post]);
 
-    if (!post) {
-        return <div>Post not found.</div>;
-    }
+    if (!post) return <div>Post not found.</div>;
+
 
     return (
         <article>
-            <h1>{post.title}</h1>
             <div dangerouslySetInnerHTML={{ __html: sanitizeHtml(post.content) }} />
         </article>
     );
