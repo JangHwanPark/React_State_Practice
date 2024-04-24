@@ -1,0 +1,12 @@
+@use '../mixin';
+
+.header_wrap {
+  height: 100%;
+  margin: 0 2rem;
+  @include mixin.flex-container(row, space-between, center);
+}
+
+.nav_list {
+  @include mixin.flex-container(row, center, center);
+  gap: 2rem;
+}
