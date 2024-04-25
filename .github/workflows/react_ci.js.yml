@@ -11,23 +11,31 @@ on:                          # 이벤트 감지
 jobs:                        # 작업 설정
   build:
     runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [ 18.x, 22.x ]
+        directory: [ 'ch1', 'ch2', 'ch3' ]
       
     steps:
     - uses: actions/checkout@v3
-    - name: Use Node.js 18.x
+    - name: Use Node.js ${{ matrix.mode-version }}
       uses: actions/setup-node@v3
       with:
-        node-version: 18.x
+        node-version: ${{ matrix.node-version }}
         cache: 'yarn'
-    
-    - name: Check Node v                            # 노드 버전 확인
-      run: node -v
 
-    - name: Install dependencies                    # 의존성 설치
-      run: yarn install --frozen-lockfile
+    - name: Set up dependencies in ${{ matrix.directory }}            # 의존성 설치
+      run: |
+          cd ${{ matrix.directory }}
+          yarn install --frozen-lockfile
       
-    - name: Generate build                          # 리액트 빌드
-      run: yarn build
+    - name: Build in ${{ matrix.directory }}                          # 리액트 빌드
+      run: |
+        cd ${{ matrix.directory }}
+        yarn build
     
-    - name: Run tests                               # 단위테스트 실행
-      run: yarn test
+    - name: Test in ${{ matrix.directory }}                           # 단위테스트 실행
+      run: |
+        cd ${{ matrix.directory }}
+        yarn test
