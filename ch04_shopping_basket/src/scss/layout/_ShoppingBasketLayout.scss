@@ -1,0 +1,20 @@
+// set width, height
+.basket-header {
+  height: 75px;
+  padding: 1rem;
+}
+
+// set flex
+.container, .contents {
+  display: flex;
+}
+
+.container {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contents {
+
+}

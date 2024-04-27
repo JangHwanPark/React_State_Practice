@@ -4,11 +4,7 @@ import {Outlet} from "react-router-dom";
 import React from "react";
 
 function App() {
-  return (
-    <div className="container">
-      <Outlet/>
-    </div>
-  );
+  return <Outlet/>
 }
 
 export default App;

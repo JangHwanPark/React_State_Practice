@@ -5,7 +5,7 @@ import reportWebVitals from './reportWebVitals';
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import App from './App';
 import Home from "./pages/Home";
-import Shop from "./feature/ShoppingBasket/Shop";
+import ShoppingBasket from "./feature/ShoppingBasket/ShoppingBasket";
 
 const router = createBrowserRouter([
     {
@@ -13,7 +13,7 @@ const router = createBrowserRouter([
         element: <App/>,
         children: [
             {index: true, element: <Home/>},
-            {path: '/shop-basket', element: <Shop/>}
+            {path: '/shop-basket', element: <ShoppingBasket/>}
         ]
     }
 ])

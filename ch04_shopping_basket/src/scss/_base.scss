@@ -1,10 +1,18 @@
 // default
-html, body,
-#root,
-.container {
+* {
   width: 100%;
-  height: 100%;
   box-sizing: border-box;
+}
+
+// set default width, height
+html, body,
+#root, .container, .contents {
+  height: 100%;
+}
+
+#root {
+  width: calc(100% - 4rem);
+  margin: 2rem;
 }
 
 blockquote, body, dd, dl, figure, h1, h2, h3, h4, ol, p, ul {
@@ -17,13 +25,6 @@ body {
   sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-
-
-.container {
-  width: calc(100% - 4rem);
-  margin: 2rem;
 }
 
 // list
