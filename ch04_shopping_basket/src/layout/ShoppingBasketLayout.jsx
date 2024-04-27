@@ -7,8 +7,8 @@ export default function ShoppingBasketLayout({children}) {
         <div className={'container'}>
             <header className={'basket-header'}>
                 <Logo/>
-                <Divider/>
             </header>
+            <Divider/>
             {/* main contents */}
             <div className={'contents'}>
                 {children}

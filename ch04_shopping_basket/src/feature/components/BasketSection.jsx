@@ -1,16 +1,12 @@
 import React from 'react';
+import Divider from "../../components/atoms/Divider";
 
-export default function BasketSection({sectionTitle}) {
+export default function BasketSection({sectionTitle, className, children}) {
     return (
-        <section>
+        <section className={className}>
             <div>{sectionTitle}</div>
-            <div>-----</div>
-            <div>ShoppingBasket Test</div>
-            <div>ShoppingBasket Test</div>
-            <div>ShoppingBasket Test</div>
-            <div>ShoppingBasket Test</div>
-            <div>ShoppingBasket Test</div>
-            <div>ShoppingBasket Test</div>
+            <Divider/>
+            {children}
         </section>
     );
 }
