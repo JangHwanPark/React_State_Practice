@@ -3,5 +3,6 @@
 @use '../components/molecules/NavList/NavList';
 @use '../components/organisms/Navbar/Navbar';
 @use './layout/ShoppingBasketLayout';
+@use '../../src/feature/ShoppingBasket/ShoppingBasket';
 
 /*# sourceMappingURL=index.css.map */

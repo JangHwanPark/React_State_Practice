@@ -18,16 +18,24 @@ export default function ShoppingBasket() {
 
     return (
         <ShoppingBasketLayout>
-            <BasketSection sectionTitle={'장바구니'} className={'shop-basket'}>
-                <div>상품 목록 표로 출력</div>
-                <div>ShoppingBasket Test</div>
-                <div>ShoppingBasket Test</div>
-                <div>ShoppingBasket Test</div>
-                <div>ShoppingBasket Test</div>
-                <div>ShoppingBasket Test</div>
-                <div>ShoppingBasket Test</div>
+            <BasketSection sectionTitle={<h2>장바구니</h2>} className={'shop-basket'}>
+                <ul className={'products-header'}>
+                    <li><h3>상품명</h3></li>
+                    <li><h3>금액</h3></li>
+                    <li><h3>재고</h3></li>
+                    <li></li>
+                </ul>
+                {/* 상품 데이터 출력 */}
+                {products.map(product => (
+                    <ul key={product.PID} className={'products-list'}>
+                        <li>{product.PName}</li>
+                        <li>{product.Price}</li>
+                        <li>{product.Stock}</li>
+                        <li>삭제</li>
+                    </ul>
+                ))}
             </BasketSection>
-            <BasketSection sectionTitle={'주문 금액'} className={'order-price'}>
+            <BasketSection sectionTitle={<h2>주문 금액</h2>} className={'order-price'}>
                 <div>상품 가격</div>
                 <div>할인 금액</div>
                 <div>배송비</div>

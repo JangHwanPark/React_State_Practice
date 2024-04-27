@@ -6,9 +6,11 @@
 // molecules
 @use '../components/molecules/NavList/NavList';
 
-
 // organisms
 @use '../components/organisms/Navbar/Navbar';
 
 // Layout
 @use './layout/ShoppingBasketLayout';
+
+// Feature
+@use '../../src/feature/ShoppingBasket/ShoppingBasket';
