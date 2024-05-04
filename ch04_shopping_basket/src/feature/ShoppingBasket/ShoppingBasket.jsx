@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import ShoppingBasketLayout from "../../layout/ShoppingBasketLayout";
 import BasketSection from "../components/BasketSection";
 import Button from "../../components/atoms/Button";
