@@ -6,11 +6,13 @@ import React from "react";
 function App() {
     return (
         <>
-          <ul>
-            <li><Link to={'/'}>Home</Link></li>
-            <li><Link to={'/posts/1'}>PostDetails</Link></li>
-          </ul>
-          <Outlet/>
+            <nav className={'grid-col-12'}>
+                <ul className={'flex justify-center'}>
+                    <li><Link to={'/'}>Home</Link></li>
+                    <li><Link to={'/posts/1'}>PostDetails</Link></li>
+                </ul>
+            </nav>
+            <Outlet/>
         </>
     );
 }

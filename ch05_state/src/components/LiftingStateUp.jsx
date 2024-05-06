@@ -14,7 +14,7 @@ export default function LiftingStateUp({...rest}) {
     
     return (
         <div>
-            <h1>상태 끌어올리기 예제</h1>
+            <h2>상태 끌어올리기 예제</h2>
             <button onClick={handleClickStateUp}>클릭하면 1 증가</button>
             <button onClick={handleClickStateDown}>클릭하면 1 감소</button>
         </div>
