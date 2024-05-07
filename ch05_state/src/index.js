@@ -8,6 +8,7 @@ import Home from "./pages/Home";
 import PostDetail from "./pages/PostDetail";
 
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
+import Test from "./pages/Test";
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,7 @@ const router = createBrowserRouter([
     element: <App/>,
     children: [
       {index: true, element: <Home/>},
+      {path: "/test", element: <Test/>},
       {path: "/posts/:slug", element: <PostDetail/>},
     ]
   }

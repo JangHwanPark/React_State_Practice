@@ -1,6 +1,7 @@
 import React from 'react';
 import LiftingStateUp from "../components/LiftingStateUp";
 import ArrayUseState from "../components/ArrayUseState";
+import {Link} from "react-router-dom";
 
 export default function Home() {
     // 부모 컴포넌트에서 상태 관리
@@ -26,6 +27,11 @@ export default function Home() {
             </div>
             <div className={'grid-col-6'}>
                 <ArrayUseState state={arrayState} setState={setArrayState}/>
+            </div>
+            <div className={'col-12'}>
+                <Link to={'/test'}>
+                    Test 페이지로 이동
+                </Link>
             </div>
         </>
     );

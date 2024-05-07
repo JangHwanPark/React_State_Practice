@@ -10,6 +10,7 @@ function App() {
                 <ul className={'flex justify-center'}>
                     <li><Link to={'/'}>Home</Link></li>
                     <li><Link to={'/posts/1'}>PostDetails</Link></li>
+                    <li><Link to={'/test'}>Test 페이지로 이동</Link></li>
                 </ul>
             </nav>
             <Outlet/>
