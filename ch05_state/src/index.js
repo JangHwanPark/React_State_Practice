@@ -9,6 +9,8 @@ import PostDetail from "./pages/PostDetail";
 
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import Test from "./pages/Test";
+import Carousel from "./pages/Carousel";
+import Accordion from "./pages/Accordion";
 
 const router = createBrowserRouter([
   {
@@ -16,7 +18,9 @@ const router = createBrowserRouter([
     element: <App/>,
     children: [
       {index: true, element: <Home/>},
-      {path: "/test", element: <Test/>},
+      {path: "/a/01", element: <Accordion/>},
+      {path: "/b/01", element: <Test/>},
+      {path: "/c/01", element: <Carousel/>},
       {path: "/posts/:slug", element: <PostDetail/>},
     ]
   }

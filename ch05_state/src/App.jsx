@@ -10,7 +10,9 @@ function App() {
                 <ul className={'flex justify-center'}>
                     <li><Link to={'/'}>Home</Link></li>
                     <li><Link to={'/posts/1'}>PostDetails</Link></li>
-                    <li><Link to={'/test'}>Test 페이지로 이동</Link></li>
+                    <li><Link to={'/a/01'}>아코디언 UI</Link></li>
+                    <li><Link to={'/b/01'}>토글 이벤트 UI</Link></li>
+                    <li><Link to={'/c/01'}>캐러셀 UI</Link></li>
                 </ul>
             </nav>
             <Outlet/>
