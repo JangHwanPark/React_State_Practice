@@ -8,7 +8,7 @@ import Home from "./pages/Home";
 import PostDetail from "./pages/PostDetail";
 
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
-import Test from "./pages/Test";
+import ButtonShowEvent from "./pages/ButtonShowEvent";
 import Carousel from "./pages/Carousel";
 import Accordion from "./pages/Accordion";
 
@@ -18,9 +18,10 @@ const router = createBrowserRouter([
     element: <App/>,
     children: [
       {index: true, element: <Home/>},
-      {path: "/a/01", element: <Accordion/>},
-      {path: "/b/01", element: <Test/>},
-      {path: "/c/01", element: <Carousel/>},
+      {path: "/accordion", element: <Accordion/>},
+      {path: "/accordion", element: <Accordion/>},
+      {path: "/button", element: <ButtonShowEvent/>},
+      {path: "/carousel/:id", element: <Carousel/>},
       {path: "/posts/:slug", element: <PostDetail/>},
     ]
   }
