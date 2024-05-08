@@ -1,5 +1,5 @@
 import React, {useEffect, useRef} from 'react';
-import FadeInAnimation from "../utils/ToggleAnimation";
+import FadeInAnimation from "../../utils/ToggleAnimation";
 
 export default function ToggleFadeInAnimation() {
     const ref = useRef(null);

@@ -1,15 +1,13 @@
-body {
-    margin: 1rem;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+    height: 100%;
 }
 
-code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#root, body {
+    margin: 2rem;
 }
 
 ul, ol {
@@ -18,8 +16,37 @@ ul, ol {
     list-style: none;
 }
 
+/* Font */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+}
+
+h4 {
+    font-size: 1rem;
+}
+
+h5 {
+    font-size: 0.875rem;
+}
+
+h6 {
+    font-size: 0.75rem;
+}
+
 /* grid */
-#root, .grid {
+#root, .grid-container {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 1rem;
@@ -54,15 +81,22 @@ ul, ol {
 }
 
 /* flex */
-.flex {
+.flex-container {
     display: flex;
     gap: 1rem;
 }
 
-.flex-col {
+.flex-container .flex-col {
     flex-direction: column;
 }
 
-.justify-center {
+.flex-container .justify-center {
     justify-content: center;
+}
+
+/* Section 내 Link */
+.section a:hover {
+    font-size: 1rem;
+    transform: scale(1.1);
+    transition: .5s;
 }

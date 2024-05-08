@@ -1,13 +1,12 @@
-import logo from './logo.svg';
-import './App.css';
+import './index.css';
 import {Link, Outlet} from "react-router-dom";
 import React from "react";
 
 function App() {
     return (
         <>
-            <nav className={'grid-col-12'}>
-                <ul className={'flex justify-center'}>
+            <nav className={'h-10 mb-5 col-span-12'}>
+                <ul className={'h-full flex justify-center items-center gap-3'}>
                     <li><Link to={'/'}>Home</Link></li>
                     <li><Link to={'/posts/1'}>PostDetails</Link></li>
                     <li><Link to={'/accordion'}>아코디언 UI</Link></li>

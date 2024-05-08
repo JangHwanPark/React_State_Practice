@@ -1,5 +1,5 @@
 import React from 'react';
-import ToggleFadeInAnimation from "../components/ToggleFadeInAnimation";
+import ToggleFadeInAnimation from "../components/useEffect/ToggleFadeInAnimation";
 
 export default function ButtonShowEvent() {
     const [show, setShow] = React.useState(false);
