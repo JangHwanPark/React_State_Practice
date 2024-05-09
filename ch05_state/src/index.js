@@ -21,6 +21,7 @@ import Accordion from "./pages/Accordion";
 import PostList from "./pages/MiniProjects/Posts/PostList";
 import PostDetail from "./pages/MiniProjects/Posts/PostDetail";
 import BasicUseStatePage from "./pages/UseState/BasicUseStatePage";
+import CreditCardPage from "./pages/MiniProjects/CreditCard/CreditCardPage";
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,9 @@ const router = createBrowserRouter([
     element: <App/>,
     children: [
       {index: true, element: <Home/>},
+      {path: "/mini-projects/posts", element: <PostList/>},
+      {path: "/mini-projects/posts/:slug", element: <PostDetail/>},
+      {path: "/mini-projects/credit-card", element: <CreditCardPage/>},
       {path: "/accordion", element: <Accordion/>},
       {path: "/use-state/basic", element: <BasicUseStatePage/>},
       {path: "/use-state/array", element: <ArrayUseStatePage/>},
@@ -35,8 +39,6 @@ const router = createBrowserRouter([
       {path: "/use-effect/button/toggle", element: <ButtonShowEvent/>},
       {path: "/use-effect/button/toggle", element: <ButtonShowEvent/>},
       {path: "/use-effect/carousel", element: <Carousel/>},
-      {path: "/mini-projects/posts", element: <PostList/>},
-      {path: "/mini-projects/posts/:slug", element: <PostDetail/>},
     ]
   }
 ])

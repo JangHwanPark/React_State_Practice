@@ -6,6 +6,7 @@ const HOME_PATH = [
     {
         title: "Mini Project Home",
         children: [
+            {title: "Credit Card", path: "mini-projects/credit-card"},
             {title: "PostList", path: "/mini-projects/posts"}
         ]
     },
