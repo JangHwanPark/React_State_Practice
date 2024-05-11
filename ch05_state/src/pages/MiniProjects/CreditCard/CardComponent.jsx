@@ -15,12 +15,6 @@ export default function CardComponent({...props}) {
             <div>
                 <span>카드번호</span>
                 <span>{cardInfo.number}</span>
-                <span>-</span>
-                <span>{cardInfo.number}</span>
-                <span>-</span>
-                <span>{cardInfo.number}</span>
-                <span>-</span>
-                <span>{cardInfo.number}</span>
             </div>
             <div>
                 <span>유효기간</span>

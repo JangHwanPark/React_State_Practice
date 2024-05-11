@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import InputComponent from "./InputComponent";
 import CardComponent from "./CardComponent";
 import SelectComponent from "./SelectComponent";
@@ -29,11 +29,26 @@ export default function CreditCardPage() {
         number: "", validity: "", security: "", password: ""
     }); // 카드 상태 객체로 관리
 
-    const handleChangeInput = (field, value) => {
-        setCardInfo(prev => ({
-            ...prev, [field]: value
-        }));
+    const handleChangeInput = (name, value, idx) => {
+        console.log(`name: ${name}`)
+        console.log(`value: ${value}`)
+
+        setCardInfo(prev => {
+            console.log(`prev: ${prev}`)
+            let newValue = value
+            if (name === "number") {
+                let parts = prev.number.split(' ');
+                parts[idx] = value;
+                newValue = parts.join(' ');
+            }
+
+            return { ...prev, [name]: newValue }
+        });
     }
+
+    useEffect(() => {
+        console.log("Updated cardInfo:", cardInfo);
+    }, [cardInfo]);
 
     console.log(cardInfo)
 
