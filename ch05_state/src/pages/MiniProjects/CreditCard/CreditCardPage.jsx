@@ -17,21 +17,25 @@ const koreanCardCompanies = [
 ];
 
 const InputInfo = [
-    { inputId: "card-number", label: "카드번호", parts: [{ maxLength: 4 }, { maxLength: 4 }, { maxLength: 4 }, { maxLength: 4 }] },
-    { inputId: "validity-period", label: "유효기간", parts: [{ maxLength: 2 }, { maxLength: 2 }] },
-    { inputId: "security-code", label: "보안코드 (CVC/CVV)", parts: [{ maxLength: 3 }] },
-    { inputId: "card-pwd", label: "비밀번호", parts: [{ maxLength: 4 }] },
+    { inputId: "number", label: "카드번호", parts: [{ maxLength: 4 }, { maxLength: 4 }, { maxLength: 4 }, { maxLength: 4 }] },
+    { inputId: "validity", label: "유효기간", parts: [{ maxLength: 2 }, { maxLength: 2 }] },
+    { inputId: "security", label: "보안코드 (CVC/CVV)", parts: [{ maxLength: 3 }] },
+    { inputId: "password", label: "비밀번호", parts: [{ maxLength: 2 },{ maxLength: 2 }] },
 ];
 
 export default function CreditCardPage() {
     const [pgCompany, setCardCompany] = useState('카드사를 선택하세요.');
-    const [cardNumber, setCardNumber] = useState();
-    const [validity, setValidity] = useState();
-    const [securityCode, setSecurityCode] = useState();
-    const [cardPass, setCardPass] = useState();
+    const [cardInfo, setCardInfo] = useState({
+        number: "", validity: "", security: "", password: ""
+    }); // 카드 상태 객체로 관리
 
-    console.log(`CreditCardPage: ${pgCompany}`)
-    console.log(`CardNumber: ${cardNumber}`)
+    const handleChangeInput = (field, value) => {
+        setCardInfo(prev => ({
+            ...prev, [field]: value
+        }));
+    }
+
+    console.log(cardInfo)
 
     return (
         <div className={'col-span-12'}>
@@ -44,9 +48,7 @@ export default function CreditCardPage() {
             {/* ***** 카드정보 출력 ***** */}
             <CardComponent
                 pgCompany={pgCompany}
-                cardNumber={cardNumber}
-                validity={validity}
-                securityCode={securityCode}
+                {...cardInfo}
             />
 
             {/* ***** 카드정보 입력 ******/}
@@ -56,6 +58,7 @@ export default function CreditCardPage() {
                     inputId={info.inputId}
                     label={info.label}
                     parts={info.parts}
+                    onChange={handleChangeInput}
                 />
             ))}
         </div>
