@@ -22,6 +22,8 @@ import PostList from "./pages/MiniProjects/Posts/PostList";
 import PostDetail from "./pages/MiniProjects/Posts/PostDetail";
 import BasicUseStatePage from "./pages/UseState/BasicUseStatePage";
 import CreditCardPage from "./pages/MiniProjects/CreditCard/CreditCardPage";
+import ObjectState from "./pages/ObjArrState/ObjectState";
+import ArrayState from "./pages/ObjArrState/ArrayState";
 
 const router = createBrowserRouter([
   {
@@ -36,6 +38,8 @@ const router = createBrowserRouter([
       {path: "/use-state/basic", element: <BasicUseStatePage/>},
       {path: "/use-state/array", element: <ArrayUseStatePage/>},
       {path: "/use-state/lift-state-up", element: <LiftingStateUpPage/>},
+      {path: "/use-state/object", element: <ObjectState/>},
+      {path: "/use-state/array", element: <ArrayState/>},
       {path: "/use-effect/button/toggle", element: <ButtonShowEvent/>},
       {path: "/use-effect/button/toggle", element: <ButtonShowEvent/>},
       {path: "/use-effect/carousel", element: <Carousel/>},

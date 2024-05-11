@@ -19,6 +19,22 @@ const HOME_PATH = [
         ]
     },
     {
+        title: "객체 배열 상태관리",
+        children: [
+            {title: "객체 상태 관리 연습", path: "/use-state/object"},
+            {title: "배열 상태 관리 연습", path: "/use-state/array"},
+            {title: "LiftingStateUpPage", path: "/use-state/lift-state-up"}
+        ]
+    },
+    {
+        title: "이전 상태 관리",
+        children: [
+            {title: "BasicUseStatePage", path: "/use-state/basic"},
+            {title: "ArrayUseStatePage", path: "/use-state/array"},
+            {title: "LiftingStateUpPage", path: "/use-state/lift-state-up"}
+        ]
+    },
+    {
         title: "useEffect",
         children: [
             {title: "ButtonShowEvent", path: "/use-effect/button/toggle"},
@@ -29,11 +45,12 @@ const HOME_PATH = [
 
 export default function Home() {
     const renderSectionPage = (section) => (
-        <section className={'section col-span-12'}>
+        <section key={section.title} className={'section col-span-12'}>
             <h2 className={'mb-3'}>{section.title}</h2>
             <div className={'grid grid-cols-5 gap-3'}>
-                {section.children.map(child => (
+                {section.children.map((child) => (
                     <Link
+                        key={child.path}
                         className={'col-span-1 text-center border-b border-black'}
                         to={child.path}
                     >{child.title}
