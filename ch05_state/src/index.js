@@ -22,8 +22,9 @@ import PostList from "./pages/MiniProjects/Posts/PostList";
 import PostDetail from "./pages/MiniProjects/Posts/PostDetail";
 import BasicUseStatePage from "./pages/UseState/BasicUseStatePage";
 import CreditCardPage from "./pages/MiniProjects/CreditCard/CreditCardPage";
-import ObjectState from "./pages/ObjArrState/ObjectState";
-import ArrayState from "./pages/ObjArrState/ArrayState";
+import ObjectState from "./pages/ObjState/ObjectState";
+import ArrayState from "./pages/ArrState/ArrayState";
+import ImageCarousel from "./pages/MiniProjects/ImageCarousel/ImageCarousel";
 
 const router = createBrowserRouter([
   {
@@ -31,15 +32,19 @@ const router = createBrowserRouter([
     element: <App/>,
     children: [
       {index: true, element: <Home/>},
+        // mini projects
       {path: "/mini-projects/posts", element: <PostList/>},
       {path: "/mini-projects/posts/:slug", element: <PostDetail/>},
       {path: "/mini-projects/credit-card", element: <CreditCardPage/>},
+      {path: "/mini-projects/img-carousel", element: <ImageCarousel/>},
+        // use-state
       {path: "/accordion", element: <Accordion/>},
       {path: "/use-state/basic", element: <BasicUseStatePage/>},
       {path: "/use-state/array", element: <ArrayUseStatePage/>},
       {path: "/use-state/lift-state-up", element: <LiftingStateUpPage/>},
       {path: "/use-state/object", element: <ObjectState/>},
       {path: "/use-state/array", element: <ArrayState/>},
+        // use-effect
       {path: "/use-effect/button/toggle", element: <ButtonShowEvent/>},
       {path: "/use-effect/button/toggle", element: <ButtonShowEvent/>},
       {path: "/use-effect/carousel", element: <Carousel/>},

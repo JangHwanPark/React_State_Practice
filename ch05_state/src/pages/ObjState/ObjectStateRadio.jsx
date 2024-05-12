@@ -1,19 +1,20 @@
 import React from 'react';
 
-export default function ObjectStateRadio({ title, COLORS, option, onChecked }) {
+export default function ObjectStateRadio({ ...rest }) {
+    const {title, data, name, option, onChecked} = rest;
     return (
         <>
             <h3>{title}</h3>
-            {COLORS.map((item) => (
+            {data.map((item) => (
                 <div key={item}>
                     <input
                         key={item}
                         id={`check-color-${item}`}
                         type="radio"
-                        name="color"
+                        name={name}
                         value={item}
-                        checked={option.color === item}
-                        onChange={onChecked}
+                        checked={option === item}
+                        onChange={(e) => onChecked(e)}
                     />
                     <label htmlFor={`check-color-${item}`}>{item}</label>
                 </div>
