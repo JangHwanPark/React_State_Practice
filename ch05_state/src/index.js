@@ -25,6 +25,7 @@ import CreditCardPage from "./pages/MiniProjects/CreditCard/CreditCardPage";
 import ObjectState from "./pages/ObjState/ObjectState";
 import ArrayState from "./pages/ArrState/ArrayState";
 import ImageCarousel from "./pages/MiniProjects/ImageCarousel/ImageCarousel";
+import Practice from "./pages/Practice/Practice";
 
 const router = createBrowserRouter([
   {
@@ -39,6 +40,7 @@ const router = createBrowserRouter([
       {path: "/mini-projects/img-carousel", element: <ImageCarousel/>},
         // use-state
       {path: "/accordion", element: <Accordion/>},
+      {path: "/practice", element: <Practice/>},
       {path: "/use-state/basic", element: <BasicUseStatePage/>},
       {path: "/use-state/array", element: <ArrayUseStatePage/>},
       {path: "/use-state/lift-state-up", element: <LiftingStateUpPage/>},
