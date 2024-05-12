@@ -13,3 +13,18 @@ let reverse = {
     [value]: propertyName
 }
 console.log(`반대로 넣기 : car: ${JSON.stringify(reverse)}, propertyName: ${propertyName}, value: ${value}`);
+
+// 함수 사용 예제
+function createPropertyName(prefix, id) {
+    return `${prefix}_${id}`
+}
+
+let prefix = "user";
+let id = 102;
+let fnValue = "JPark";
+
+let resObj = {
+    [createPropertyName(prefix, id)]: fnValue
+}
+
+console.log(resObj)
