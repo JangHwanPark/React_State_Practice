@@ -5,7 +5,7 @@ import Button from "../../components/atoms/Button";
 import useFetch from "../../hooks/useFetch";
 
 export default function ShoppingBasket() {
-    // 첫번째 데이터 패칭 실패 : products = undefined
+    // 커스텀훅 호출
     const url = "https://janghwanpark.github.io/data-storage/json-data/product-data/shop-products.json";
     const {products} = useFetch(url);
 
