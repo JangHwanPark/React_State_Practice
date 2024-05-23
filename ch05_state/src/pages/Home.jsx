@@ -42,6 +42,14 @@ const HOME_PATH = [
             {title: "Carousel", path: "/use-effect/carousel"}
         ]
     },
+    {
+        title: "API 연동",
+        children: [
+            {title: "Payment", path: "/payment"},
+            {title: "PostList", path: "/mini-projects/posts"},
+            {title: "PostDetail", path: "/mini-projects/posts/:slug"}
+        ]
+    }
 ]
 
 export default function Home() {
