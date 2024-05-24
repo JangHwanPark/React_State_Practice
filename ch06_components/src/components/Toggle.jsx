@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
+import useToggle from "../hooks/useToggle";
 
 export default function Toggle() {
-    const [toggle, setToggle] = useState(false);
-    const handleClick = () => setToggle(!toggle);
+    const {toggle, handleClick} = useToggle();
 
     return (
         <div>
