@@ -1,8 +1,7 @@
 import './App.css';
-import socket from "./server";
 import {useState} from "react";
 
-function App() {
+function AlertPrompt() {
     const [user, setUser] = useState('');
 
     const showAlert = () => {
@@ -23,4 +22,4 @@ function App() {
     );
 }
 
-export default App;
+export default AlertPrompt;
