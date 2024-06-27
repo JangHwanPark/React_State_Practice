@@ -1,6 +1,13 @@
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
 .user-container {
   width: 768px;
-  height: 100vh;
+  height: 300px;
   margin: auto;
   padding: 2rem;
   display: flex;
@@ -21,13 +28,11 @@
   transform: translateX(-50px);
 }
 
-.info-wrapper:hover {
-  transform: translate(-50px, -50px);
-  transition: .5s;
+.info-wrapper.hovered {
+  transform: scale(1.5) !important; /* 호버 시 카드 확대 */
+  transition: 0.5s;
+  z-index: 10 !important; /* 호버 시 최상단에 위치 */
   cursor: pointer;
-
-  // Todo: 호버시 제일 최상단에 위치하도록 수정 예정
-  z-index: 6;
 }
 
 .icon-wrapper {
