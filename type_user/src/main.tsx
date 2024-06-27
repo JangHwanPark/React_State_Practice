@@ -7,6 +7,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 // import components
 import App from '../src/components/pages/App.tsx';
 import Home from '../src/components/pages/Home.tsx';
+import PostPage from "./components/pages/PostPage.tsx";
 
 // import css
 import './scss/index.scss';
@@ -24,7 +25,8 @@ const router = createBrowserRouter([
         path: '/',
         element: <App />,
         children: [
-            {index: true, element: <Home/>}
+            {index: true, element: <Home/>},
+            {path: "/posts", element: <PostPage/>}
         ]
     },
 ]);

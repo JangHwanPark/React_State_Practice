@@ -4,7 +4,7 @@ import AsideBar from "../common/AsideBar.tsx";
 export default function Home() {
     return (
         <div className="container">
-            <AsideBar/>
+
         </div>
     );
 }
