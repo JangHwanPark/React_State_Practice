@@ -1,0 +1,44 @@
+// PC, Tablet
+.glb {
+  width: 100%;
+  padding: 0.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  // Test
+  border: 1px solid #ddd5d5;
+}
+
+.glb-list {
+  display: flex;
+}
+
+.glb-item {
+  margin: 0 1rem;
+
+  /* SVG 이미지 세로 중앙 정렬 */
+  svg {
+    vertical-align: middle;
+  }
+
+  a {
+    color: #333;
+  }
+}
+
+.hamburger {
+  display: none;
+}
+
+// Mobile
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .glb-item {
+    display: none;
+  }
+}

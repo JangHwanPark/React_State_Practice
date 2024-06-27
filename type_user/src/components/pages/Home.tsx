@@ -1,5 +1,6 @@
 import React from 'react';
 import ButtonGroup from "../common/ButtonGroup.tsx";
+import GlobalNavigation from "../common/GlobalNavigation.tsx";
 
 export default function Home() {
     return (
@@ -8,7 +9,7 @@ export default function Home() {
             justifyContent: 'center',
             alignItems: 'center'
         }}>
-            <ButtonGroup title="하나"/>
+            <GlobalNavigation/>
         </div>
     );
 }

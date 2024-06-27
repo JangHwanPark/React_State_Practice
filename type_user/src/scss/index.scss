@@ -1,11 +1,13 @@
+// default
 @use "./base";
-
 
 // Pages
 @use "../components/pages/Home";
-
 
 // Components
 @use "../components/common/UserIcon";
 @use "../components/common/AsideBar";
 @use "../components/common/ButtonGroup";
+
+// Layout
+@use "../components/common/GlobalNavigation";
