@@ -25,7 +25,7 @@ export default function GlobalNavigation() {
                 <li className="glb-item"><Link to={"/"}>Menu</Link></li>
                 <li className="glb-item"><Link to={"/"}>Menu</Link></li>
                 <li className="glb-item"><Link to={"/"}>Menu</Link></li>
-                <li className="hamburger" onClick={handleClick}><CiMenuBurger/></li>
+                {/*<li className="hamburger" onClick={handleClick}><CiMenuBurger/></li>*/}
             </ul>
         </nav>
     );
