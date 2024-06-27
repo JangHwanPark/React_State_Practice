@@ -1,1 +1,9 @@
 @use "./base";
+
+
+// Pages
+@use "../components/pages/Home";
+
+
+// Components
+@use "../components/common/UserIcon";

@@ -1,9 +1,10 @@
 import React from 'react';
+import UserIcon from "../common/UserIcon.tsx";
 
 export default function Home() {
     return (
-        <div>
-            Home
+        <div className="container">
+            <UserIcon/>
         </div>
     );
 }
