@@ -27,28 +27,41 @@
   }
 }
 
-.hamburger {
+.hamburger-wrap {
   display: none;
 }
 
 // Mobile
 @media screen and (max-width: 768px) {
+  .glb {
+    flex-direction: column;
+  }
+
   // 로고 박스
   .logo-wrapper {
+    width: 100%;
     display: flex;
+    justify-content: space-between;
     align-items: center;
+
+    .hamburger-wrap {
+      display: block;
+    }
 
     svg {
       vertical-align: middle;
     }
   }
 
+
+  // 네비게이션 아이템
   .glb-list {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
 
+    // 팝업 오픈시 부드럽게 오픈되는 애니메이션
     max-height: 0;
     overflow: hidden;
     opacity: 0;
@@ -83,5 +96,10 @@
   .glb-list.glb-active {
     max-height: 500px; /* 충분히 큰 값으로 설정 */
     opacity: 1;
+  }
+
+  .glb-list:not(.glb-active) {
+    max-height: 0;
+    opacity: 0;
   }
 }

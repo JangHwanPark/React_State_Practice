@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {Link} from "react-router-dom";
 import {CiMenuBurger} from "react-icons/ci";
+import {IoMdClose} from "react-icons/io";
 
 export default function GlobalNavigation() {
     // 클릭값 상태 관리
@@ -16,8 +17,11 @@ export default function GlobalNavigation() {
         <nav className="glb">
             <div className="logo-wrapper">
                 <h2 className="glb-logo">Logo</h2>
-                <div onClick={handleClick}><CiMenuBurger/></div>
+                <div className="hamburger-wrap" onClick={handleClick}>
+                    {!clickBtn ? <CiMenuBurger/> : <IoMdClose />}
+                </div>
             </div>
+
             {/* 상태를 활용한 클래스 변경 */}
             <ul className={`glb-list ${clickBtn ? 'glb-active' : ''}`}>
                 <li className="glb-item"><Link to={"/"}>Menu</Link></li>
@@ -25,7 +29,6 @@ export default function GlobalNavigation() {
                 <li className="glb-item"><Link to={"/"}>Menu</Link></li>
                 <li className="glb-item"><Link to={"/"}>Menu</Link></li>
                 <li className="glb-item"><Link to={"/"}>Menu</Link></li>
-                {/*<li className="hamburger" onClick={handleClick}><CiMenuBurger/></li>*/}
             </ul>
         </nav>
     );

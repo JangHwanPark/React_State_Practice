@@ -4,11 +4,11 @@ import GlobalNavigation from "../common/GlobalNavigation.tsx";
 
 export default function Home() {
     return (
-        <div className="container" style={{
+        <div className="container" /*style={{
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center'
-        }}>
+        }}*/>
             <GlobalNavigation/>
         </div>
     );
