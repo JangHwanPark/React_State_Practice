@@ -17,8 +17,8 @@ export default function UserIcon() {
     return (
         <div className="center">
             <div className="user-container">
-                {data.slice(0, 5).map(user => (
-                    <div key={user.id} className="info-wrapper">
+                {data.slice(0, 5).map((user, index) => (
+                    <div key={user.id} className="info-wrapper" style={{zIndex: 5 - index}}>
                         <div className="icon-wrapper">
                             <FaRegCircleUser/>
                         </div>

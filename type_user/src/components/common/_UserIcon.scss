@@ -1,16 +1,33 @@
 .user-container {
-  margin: 1rem;
+  width: 768px;
+  height: 100vh;
+  margin: auto;
   padding: 2rem;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 2rem;
+  position: relative;
 }
 
 .info-wrapper {
   width: 200px;
   padding: 2rem;
+  margin-right: -125px;
   border: 1px solid #333;
+  background: #fff;
   border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transform: translateX(-50px);
+}
+
+.info-wrapper:hover {
+  transform: translate(-50px, -50px);
+  transition: .5s;
+  cursor: pointer;
+
+  // Todo: 호버시 제일 최상단에 위치하도록 수정 예정
+  z-index: 6;
 }
 
 .icon-wrapper {
