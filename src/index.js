@@ -8,6 +8,7 @@ import {QueryClient, QueryClientProvider} from '@tanstack/react-query';
 const queryClient = new QueryClient()
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+    // 리액트 쿼리 사용을 위한 프로바이더 설정
     <QueryClientProvider client={queryClient}>
         <App/>
     </QueryClientProvider>
