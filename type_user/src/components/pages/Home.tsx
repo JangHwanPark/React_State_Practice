@@ -1,10 +1,14 @@
 import React from 'react';
-import AsideBar from "../common/AsideBar.tsx";
+import ButtonGroup from "../common/ButtonGroup.tsx";
 
 export default function Home() {
     return (
-        <div className="container">
-
+        <div className="container" style={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center'
+        }}>
+            <ButtonGroup title="하나"/>
         </div>
     );
 }

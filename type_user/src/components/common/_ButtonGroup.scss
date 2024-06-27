@@ -1,0 +1,39 @@
+/* style 1 */
+.btn-style-one {
+  // 임시 넓이 높이
+  width: 100px;
+  height: 30px;
+  color: #fff;
+  background-color: #c00402;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.btn-style-one::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  transition: width 0.5s ease-out, height 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.btn-style-one:hover::before {
+  width: 200px;
+  height: 200px;
+  opacity: 1;
+
+}
+
+.btn-style-one:active {
+  transform: scale(1.1);
+}
