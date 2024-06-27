@@ -12,10 +12,12 @@ const root = ReactDOM.createRoot(rootElement!);
 const queryClient = new QueryClient();
 
 // 리액트 라우트 설정
-const router = createBrowserRouter({
-    path: "/",
-    element: <App/>
-})
+const router = createBrowserRouter([
+    {
+        path: "/",
+        element: <App/>
+    }
+])
 
 root.render(
     <QueryClientProvider client={queryClient}>
