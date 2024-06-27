@@ -1,5 +1,6 @@
 @use "./base";
 @use "../components/pages/Home";
 @use "../components/common/UserIcon";
+@use "../components/common/AsideBar";
 
 /*# sourceMappingURL=index.css.map */
