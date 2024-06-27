@@ -1,0 +1,53 @@
+.select {
+  display: flex;
+  flex-direction: column;
+}
+
+.select-btn {
+  width: 200px;
+  height: 50px;
+  background: none;
+  text-align: center;
+
+  span:last-child {
+    padding: 0 .5rem;
+    vertical-align: middle;
+  }
+}
+
+.select-menu {
+  width: 200px;
+  margin-top: 10px;
+  border: 1px solid #333;
+  border-radius: 10px;
+
+  .select-item {
+    width: 100%;
+
+    button {
+      width: 100%;
+      height: 50px;
+      border: none;
+      background: none;
+    }
+
+    button:hover {
+      background: #bbb7b7;
+      cursor: pointer;
+    }
+
+    /**
+     * 컨테이너 클래스의 border-radius 속성으로 첫 요소와 마지막 요소의
+     * 상단 하단 테두리만 조정
+     */
+    &:first-child button {
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+
+    &:last-child button {
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+  }
+}

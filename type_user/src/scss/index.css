@@ -3,6 +3,7 @@
 @use "../components/common/UserIcon";
 @use "../components/common/AsideBar";
 @use "../components/common/ButtonGroup";
+@use "../components/common/Select";
 @use "../components/common/GlobalNavigation";
 
 /*# sourceMappingURL=index.css.map */
