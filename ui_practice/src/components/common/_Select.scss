@@ -1,6 +1,9 @@
 .select {
   display: flex;
   flex-direction: column;
+
+  // select 기준으로 위치를 잡기 위해 상대 위치 지정
+  position: relative;
 }
 
 .select-btn {
@@ -20,6 +23,13 @@
   margin-top: 10px;
   border: 1px solid #333;
   border-radius: 10px;
+
+  // select 기준으로 위치를 잡기 위해 절대 위치 지정
+  position: absolute;
+  top: 50px;
+
+  // 애니메이션 추가
+  animation: slideDown .5s ease;
 
   .select-item {
     width: 100%;
@@ -49,5 +59,22 @@
       border-bottom-left-radius: 10px;
       border-bottom-right-radius: 10px;
     }
+  }
+}
+
+// 애니메이션 설정
+@keyframes slideDown {
+  from {
+    opacity: 0;
+
+    // 위에서 아래로 내려오는 효과
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+
+    // 최종 위치
+    transform: translateY(0);
   }
 }

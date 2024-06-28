@@ -1,9 +1,311 @@
-@use "./base";
-@use "../components/pages/Home";
-@use "../components/common/UserIcon";
-@use "../components/common/AsideBar";
-@use "../components/common/ButtonGroup";
-@use "../components/common/Select";
-@use "../components/common/GlobalNavigation";
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+}
+
+#root,
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+/* list */
+ol, ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* link */
+a {
+  text-decoration: none;
+}
+
+/* h1 ~ h6 */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.user-container {
+  width: 768px;
+  height: 300px;
+  margin: auto;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  position: relative;
+}
+
+.info-wrapper {
+  width: 200px;
+  padding: 2rem;
+  margin-right: -125px;
+  border: 1px solid #333;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transform: translateX(-50px);
+}
+
+.info-wrapper.hovered {
+  transform: scale(1.5) !important; /* 호버 시 카드 확대 */
+  transition: 0.5s;
+  z-index: 10 !important; /* 호버 시 최상단에 위치 */
+  cursor: pointer;
+}
+
+.icon-wrapper svg {
+  width: 100%;
+  height: 70px;
+}
+
+.user-name,
+.user-email {
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.user-email small {
+  width: 100px;
+}
+
+.aside-bar {
+  width: 250px;
+  background-color: #f8f9fa;
+  border-right: 1px solid #ddd;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  /* 가상 클래스가 밖으로 안나가도록 설정 */
+  overflow: hidden;
+}
+
+.aside-bar-header {
+  margin-bottom: 1rem;
+}
+
+.aside-bar-nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+.aside-bar-nav ul li {
+  height: 40px;
+  margin-bottom: 0.5rem;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+}
+.aside-bar-nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Active Event */
+.active {
+  border-bottom: 1px solid #333;
+}
+
+/* style 1 */
+.btn-style-one {
+  width: 100px;
+  height: 30px;
+  color: #fff;
+  background-color: #c00402;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.btn-style-one::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  transition: width 0.5s ease-out, height 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.btn-style-one:hover::before {
+  width: 200px;
+  height: 200px;
+  opacity: 1;
+}
+
+.btn-style-one:active {
+  transform: scale(1.1);
+}
+
+.select {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.select-btn {
+  width: 200px;
+  height: 50px;
+  background: none;
+  text-align: center;
+}
+.select-btn span:last-child {
+  padding: 0 0.5rem;
+  vertical-align: middle;
+}
+
+.select-menu {
+  width: 200px;
+  margin-top: 10px;
+  border: 1px solid #333;
+  border-radius: 10px;
+  position: absolute;
+  top: 50px;
+  animation: slideDown 0.5s ease;
+}
+.select-menu .select-item {
+  width: 100%;
+  /**
+   * 컨테이너 클래스의 border-radius 속성으로 첫 요소와 마지막 요소의
+   * 상단 하단 테두리만 조정
+   */
+}
+.select-menu .select-item button {
+  width: 100%;
+  height: 50px;
+  border: none;
+  background: none;
+}
+.select-menu .select-item button:hover {
+  background: #bbb7b7;
+  cursor: pointer;
+}
+.select-menu .select-item:first-child button {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.select-menu .select-item:last-child button {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.glb {
+  width: 100%;
+  padding: 0.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ddd5d5;
+}
+
+.glb-list {
+  display: flex;
+}
+
+.glb-item {
+  margin: 0 1rem;
+  /* SVG 이미지 세로 중앙 정렬 */
+}
+.glb-item svg {
+  vertical-align: middle;
+}
+.glb-item a {
+  color: #333;
+}
+
+.hamburger-wrap {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .glb {
+    flex-direction: column;
+  }
+  .logo-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo-wrapper .hamburger-wrap {
+    display: block;
+  }
+  .logo-wrapper svg {
+    vertical-align: middle;
+  }
+  .glb-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 1s ease, opacity 1s ease;
+  }
+  .glb-item {
+    margin: 1rem 0;
+  }
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+  .glb-list .glb-item {
+    /* 기본값으로 숨기기 */
+    display: none;
+  }
+  .glb-list.active .glb-item {
+    /* active 클래스가 있을 때 아이템 표시 */
+    display: block;
+  }
+  /* 클릭 상태 활성화 시 */
+  .glb-list.glb-active .glb-item {
+    display: block;
+  }
+  .glb-list.glb-active {
+    max-height: 500px; /* 충분히 큰 값으로 설정 */
+    opacity: 1;
+  }
+  .glb-list:not(.glb-active) {
+    max-height: 0;
+    opacity: 0;
+  }
+}
 
 /*# sourceMappingURL=index.css.map */
