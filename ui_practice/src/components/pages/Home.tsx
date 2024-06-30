@@ -1,5 +1,5 @@
 import React from 'react';
-import Select from "../common/Select.tsx";
+import AppleMacAnime from "./AppleMacAnime.tsx";
 
 export default function Home() {
     return (
@@ -8,7 +8,7 @@ export default function Home() {
             justifyContent: 'center',
             alignItems: 'center'
         }}>
-            <Select/>
+            <AppleMacAnime/>
         </div>
     );
 }

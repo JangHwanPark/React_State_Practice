@@ -1,6 +1,7 @@
 .select {
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .select-btn {
@@ -15,11 +16,20 @@
   }
 }
 
+// Todo 슬라이드 애니메이션 적용이 안되는 문제
 .select-menu {
   width: 200px;
   margin-top: 10px;
   border: 1px solid #333;
   border-radius: 10px;
+
+  // 드롭다운 애니메이션 설정
+  position: absolute;
+  top: 60px; // 버튼 하단에 위치하도록 설정
+  transform: scaleY(0); // 초기 상태에서는 보이지 않도록 설정
+  transform-origin: top; // 위에서 아래로 열리게 설정
+  transition: transform 1s ease; // 트랜지션 효과 적용
+  overflow: hidden;   // 애니메이션 중간에 요소가 잘리지 않도록 설정
 
   .select-item {
     width: 100%;
@@ -50,4 +60,8 @@
       border-bottom-right-radius: 10px;
     }
   }
+}
+
+.open {
+  transform: scaleY(1); // 셀렉트 오픈시 보이도록 설정
 }

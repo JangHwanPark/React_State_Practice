@@ -50,7 +50,7 @@ export default function Select() {
             </button>
             {/* 메뉴 오픈시 출력 */}
             {isOpen && (
-                <ul className="select-menu">
+                <ul className={`select-menu ${isOpen ? 'open' : ''}`}>
                     <li className="select-item">
                     <button>자바</button>
                     </li>
