@@ -1,12 +1,17 @@
-/*
-import React, {ChangeEvent, useState} from 'react';
+import React, {ChangeEvent} from 'react';
 
 interface InputProps {
-  addProgramming: (value: string[]) => void;
+  handleChange: (value: string) => void;
 }
 
-const Input: React.FC<InputProps> = ({addProgramming}) => {
+const Input: (
+  {
+    setInputItem
+  }) => React.JSX.Element = ({setInputItem}) => {
 
+  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setInputItem(e.target.value);
+  }
 
   return (
     <div>
@@ -15,4 +20,4 @@ const Input: React.FC<InputProps> = ({addProgramming}) => {
   );
 };
 
-export default Input;*/
+export default Input;
