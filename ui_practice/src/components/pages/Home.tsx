@@ -1,5 +1,6 @@
 import React from 'react';
 import AppleMacAnime from "./AppleMacAnime.tsx";
+import TabButtonUI from "../common/TabButtonUI.tsx";
 
 export default function Home() {
     return (
@@ -8,7 +9,7 @@ export default function Home() {
             justifyContent: 'center',
             alignItems: 'center'
         }}>
-            <AppleMacAnime/>
+            <TabButtonUI/>
         </div>
     );
 }
