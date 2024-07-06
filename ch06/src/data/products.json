@@ -1,0 +1,29 @@
+[
+  {
+    "name": "아이폰 15",
+    "price": 1000000,
+    "option1": "Pro",
+    "option2": "Pro Max"
+  },
+  {
+    "name": "Macbook M3",
+    "price": 1000000,
+    "option1": "Air",
+    "option2": "Pro",
+    "option3": "Pro Max"
+  },
+  {
+    "name": "iPad",
+    "price": 1000000,
+    "option1": "Air",
+    "option2": "Pro"
+  },
+  {
+    "name": "Watch",
+    "price": 1000000,
+    "option1": "SE",
+    "option2": "Ultra",
+    "option3": "Nike",
+    "option4": "Hermes"
+  }
+]
