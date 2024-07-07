@@ -16,8 +16,8 @@ const Products = ({data, handleClickAddBasket, handleAdd, handleRemove, showCoun
             {handleClickAddBasket && <button onClick={() => handleClickAddBasket(item)}>담기</button>}
             {handleAdd && handleRemove && (
               <>
-                <button onClick={() => handleAdd(item.name, 1)}>+</button>
-                <button onClick={() => handleRemove(item.name, -1)}>-</button>
+                <button onClick={() => handleAdd(item.name, item.price, 1)}>+</button>
+                <button onClick={() => handleRemove(item.name, item.price, -1)}>-</button>
               </>
             )}
           </li>
