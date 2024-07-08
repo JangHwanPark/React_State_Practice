@@ -1,7 +1,7 @@
 import {useEffect, useMemo, useState} from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
-import './App.css'
+import './_base.scss'
 
 const hardCalculate = number => {
   console.log("오래걸리는 작업 시작")
@@ -14,7 +14,7 @@ const easyCalculate = number => {
   return number + 1
 }
 
-function App() {
+function Memo() {
   // const [hardNumber, setHardNumber] = useState(1);
   // const [easyNumber, setEasyNumber] = useState(1);
   //
@@ -68,4 +68,4 @@ function App() {
   )
 }
 
-export default App
+export default Memo
