@@ -1,6 +1,11 @@
 import React from 'react';
 
-const Calendar = ({date, dayNames}) => {
+const Calendar = ({date, dayNames, setSelectDate}) => {
+  const handleClick = (e) => {
+    const { innerText } = e.target;
+    setSelectDate(innerText)
+  }
+
   const getDaysInMonth = (year, month) => {
     return new Date(year, month + 1, 0).getDate();
   }
@@ -23,14 +28,22 @@ const Calendar = ({date, dayNames}) => {
 
     // 날짜 추가
     for (let day = 1; day <= daysInMonth; day++) {
-      calendarDays.push(<div key={day} className="day">{day}</div>);
+      calendarDays.push(
+        <div
+          key={day}
+          className="day"
+          onClick={handleClick}
+        >
+          {day}
+        </div>
+      );
     }
 
     return calendarDays;
   }
 
   return (
-    <div>
+    <div className='calendar-con'>
       <div className="day-names">
         {dayNames.map(day => (
           <span key={day}>{day}</span>

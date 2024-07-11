@@ -14,7 +14,7 @@ function App() {
 
   const handleChangeName = (e) => {
     const { value } = e.target;
-    console.log(value)
+    setInputName(value)
   }
 
   const handleChangePhone = (e) => {
@@ -26,10 +26,10 @@ function App() {
   }
 
   return (
-    <div>
+    <div className='container'>
       <DateButton date={date} setDate={setDate}/>
-      <Calendar date={date} dayNames={dayNames}/>
-      <div>
+      <Calendar date={date} dayNames={dayNames} setSelectDate={setSelectDate}/>
+      <div className='input-wrapper'>
         <label htmlFor="">이름</label>
         <input
           type="text"
@@ -37,7 +37,7 @@ function App() {
           onChange={handleChangeName}
         />
       </div>
-      <div>
+      <div className='input-wrapper'>
         <label htmlFor="">전화번호</label>
         <input
           type="text"
@@ -57,6 +57,11 @@ function App() {
           value={phoneNumber.part3}
           onChange={handleChangePhone}
         />
+      </div>
+      <div>
+        <p>{date.getFullYear()}년 {date.getMonth() + 1}월 {selectDate}일</p>
+        <p>{inputName}</p>
+        <p>{phoneNumber.part1}-{phoneNumber.part2}-{phoneNumber.part3}</p>
       </div>
     </div>
   )

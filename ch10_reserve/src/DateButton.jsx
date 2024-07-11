@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 
 const DateButton = ({date, setDate}) => {
   const handleNextMonth = () => {
@@ -24,7 +24,7 @@ const DateButton = ({date, setDate}) => {
   return (
     <div>
       <button onClick={handlePrevMonth}>이전</button>
-      <span>{date.getFullYear()}.{date.getMonth()}</span>
+      <span>{date.getFullYear()}년 {date.getMonth() + 1}월</span>
       <button onClick={handleNextMonth}>다음</button>
     </div>
   );
