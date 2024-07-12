@@ -23,7 +23,12 @@ const Calendar = ({date, dayNames, setSelectDate}) => {
 
     // 빈 칸 추가
     for (let i = 0; i < firstDayOfWeek; i++) {
-      calendarDays.push(<div key={`empty-${i}`} className="empty-day"></div>);
+      calendarDays.push(
+        <div
+          key={`empty-${i}`}
+          className="empty-day">
+        </div>
+      );
     }
 
     // 날짜 추가
@@ -33,8 +38,7 @@ const Calendar = ({date, dayNames, setSelectDate}) => {
           key={day}
           className="day"
           onClick={handleClick}
-        >
-          {day}
+        >{day}
         </div>
       );
     }
