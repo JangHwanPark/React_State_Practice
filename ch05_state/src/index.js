@@ -27,6 +27,7 @@ import ArrayState from "./pages/ArrState/ArrayState";
 import ImageCarousel from "./pages/MiniProjects/ImageCarousel/ImageCarousel";
 import Practice from "./pages/Practice/Practice";
 import PaymentHome from "./pages/Payment/PaymentHome";
+import ReducerExam from "./feature/useReducer/ReducerExam";
 
 const router = createBrowserRouter([
     {
@@ -59,7 +60,8 @@ const router = createBrowserRouter([
 
 const rootDom = document.getElementById('root')
 const root = ReactDOM.createRoot(rootDom);
-root.render(<RouterProvider router={router}/>)
+// root.render(<RouterProvider router={router}/>)
+root.render(<ReducerExam/>)
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
